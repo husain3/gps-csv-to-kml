@@ -7,8 +7,8 @@ df = pd.read_csv('gps_data.csv')
 
 df.drop(4)
 
-df.columns = ['latitude', 'longitude', 'altitude', 'hdop', 'datetime']
-rearrange_columns = ['longitude', 'latitude', 'altitude', 'hdop', 'datetime']
+df.columns = ['latitude', 'longitude', 'altitude', 'hdop', 'ackReceived', 'datetime']
+rearrange_columns = ['longitude', 'latitude', 'altitude', 'hdop', 'ackReceived', 'datetime']
 
 df = df.drop(columns=['datetime'])
 df = df.reindex(columns=rearrange_columns)
